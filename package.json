@@ -1,0 +1,19 @@
+{
+  "name": "tmdb-search-pro-max",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tmdb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}
