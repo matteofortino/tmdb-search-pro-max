@@ -1,4 +1,5 @@
 import Tmdb from './tmdb'
+import debounce from "lodash.debounce";
 
 const form = document.getElementById('form')
 const searchbar = document.getElementById('search-bar')
@@ -7,7 +8,8 @@ const movieContainer = document.getElementsByClassName('movies-container')[0]
 const resultsContainer = document.getElementsByClassName('results')[0]
 const tmdb = new Tmdb(process.env.TMDB_API_KEY)
 
-form.addEventListener('submit', search)
+// form.addEventListener('submit', search)
+searchbar.addEventListener('input', debounce(search, 250))
 
 async function search(e) {
     e.preventDefault()
