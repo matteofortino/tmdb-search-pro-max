@@ -16,8 +16,10 @@ async function search(e) {
 
     resultsContainer.innerText = null
 
+    if(!searchbar.value)
+        return
+
     const { results: movies } = await tmdb.searchMovies(searchbar.value)
-    console.log(movies)
 
     movies.forEach(movie => {
         const poster = document.createElement('img')
